@@ -1,481 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Lato:wght@400;700&family=Montserrat:wght@300;600;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/common.min.css" />
-    <link rel="stylesheet" href="css/blog.min.css" />
-    <title>DLK Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/blog.css">
+    <title>My Blog</title>
   </head>
-  <body>
+	<body>
     <header class="header">
-  <div class="header__container container">
-    <a href="/" class="header__logo" aria-label="link to the main page">
-      <svg class="dlk-logo">
-        <use href="img/sprite_multi.svg#dlk-logo"></use>
-      </svg>
-    </a>
-    <nav class="header__nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="catalog.html"> catalog</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#"> about us</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="blog.html"> blog</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="animation.html"> animation</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="svg.html"> svg</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="grid.html"> grid</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header__search">
-      <input
-        class="search__inp"
-        type="text"
-        placeholder="Search..."
-        aria-label="input search"
-      />
-      <button type="button" class="search__btn" aria-label="button search">
-        <svg class="search-icon">
-          <use href="img/sprite_multi.svg#search"></use>
-        </svg>
-      </button>
-    </div>
-    <a class="header__contact" href="contact.html">contact us</a>
-    <div class="burger-btns">
-      <button class="burger-btns__open">menu</button>
-      <button class="burger-btns__close">
-        <svg class="">
-          <use href="./img/sprite_multi.svg#close-burger"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div class="burger">
-    <div class="burger__menu">
-      <ul class="burger__list">
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="catalog.html"> catalog</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="#"> about us</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="blog.html"> blog</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="animation.html"> animation</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="svg.html"> svg</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="grid.html"> grid</a>
-        </li>
-      </ul>
-      <a class="header__contact burger__contact" href="contact.html"
-        >contact us</a
-      >
+  <div class="container">
+    <div class="header__container">
+      <a class="header__link current-page" href="/" aria-label="link to the main page">Home</a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="blog.html" class="nav__link">My blog</a></li>
+          <li class="nav__item js-btn-signin"><a href="#" class="nav__link" data-signin>Sign In</a></li>
+          <li class="nav__item js-btn-register"><a href="#" class="nav__link" data-register>Register</a></li>
+          <li class="nav__item js-btn-profile hidden"><a href="profile.html" class="nav__link">My profile</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
 
+    <div class="burger">
+  
+    <input type="checkbox" id="checkbox" class="burger__checkbox visuallyHidden">
+    <label for="checkbox">
+      <svg class="ham hamRotate ham8 burger-location" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
+        <path
+              class="line top"
+              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+        <path
+              class="line middle"
+              d="m 30,50 h 40" />
+        <path
+              class="line bottom"
+              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+      </svg>
+    </label>
+    <div class="burger__menu">
+      <ul class="nav__list burger__list">
+        <li class="nav__item burger__item"><a href="index.html" class="nav__link burger__link">Home</a></li>
+        <li class="nav__item burger__item"><a href="blog.html" class="nav__link burger__link">My blog</a></li>
+        <li class="nav__item burger__item"><a href="#" class="nav__link burger__link" data-signin>Sign In</a></li>
+        <li class="nav__item burger__item"><a href="#" class="nav__link burger__link" data-register>Register</a></li>
+      </ul>
+    </div>
 
-    <main class="content">
-      <section class="blog">
-        <div class="blog__container container">
-          <h1 class="blog__title title-one">blog</h1>
-          <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="/">Home</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <span class="breadcrumbs__link">Blog</span>
-              </li>
-            </ul>
-          </div>
-          <ul class="blog__content">
-            <li class="blog__content__item">
-  <div class="blog__content__pic">
-    <picture>
-      <source
-        srcset="img/article-1_mobile.jpg, img/article-1_mobile_2x.jpg 2x"
-        media="(max-width: 600px)"
-      />
-      <source
-        srcset="img/article-1_tablet.jpg, img/article-1_tablet_2x.jpg 2x"
-        media="(max-width: 980px)"
-      />
-      <source srcset="img/article-1.jpg, img/article-1_2x.jpg 2x" />
-      <img
-        class="blog__content__img"
-        srcset="img/article-1.jpg, img/article-1_2x.jpg 2x"
-        alt="article image"
-      />
-    </picture>
-  </div>
-  <span class="blog__content__date">23rd August 2018</span>
-  <a class="blog__content__link" href="#">
-    <h2 class="blog__content__title">Top 5 fastest growing it service companies in philly</h2>
-  </a>
-  <p class="blog__content__txt">
-    Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.
-  </p>
-</li>
-
-            <li class="blog__content__item">
-  <div class="blog__content__pic">
-    <picture>
-      <source
-        srcset="img/article-2_mobile.jpg, img/article-2_mobile_2x.jpg 2x"
-        media="(max-width: 600px)"
-      />
-      <source
-        srcset="img/article-2_tablet.jpg, img/article-2_tablet_2x.jpg 2x"
-        media="(max-width: 980px)"
-      />
-      <source srcset="img/article-2.jpg, img/article-2_2x.jpg 2x" />
-      <img
-        class="blog__content__img"
-        srcset="img/article-2.jpg, img/article-2_2x.jpg 2x"
-        alt="article image"
-      />
-    </picture>
-  </div>
-  <span class="blog__content__date">23rd August 2018</span>
-  <a class="blog__content__link" href="#">
-    <h2 class="blog__content__title">Best financial</h2>
-  </a>
-  <p class="blog__content__txt">
-    Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.
-  </p>
-</li>
-
-            <li class="blog__content__item">
-  <div class="blog__content__pic">
-    <picture>
-      <source
-        srcset="img/article-3_mobile.jpg, img/article-3_mobile_2x.jpg 2x"
-        media="(max-width: 600px)"
-      />
-      <source
-        srcset="img/article-3_tablet.jpg, img/article-3_tablet_2x.jpg 2x"
-        media="(max-width: 980px)"
-      />
-      <source srcset="img/article-3.jpg, img/article-3_2x.jpg 2x" />
-      <img
-        class="blog__content__img"
-        srcset="img/article-3.jpg, img/article-3_2x.jpg 2x"
-        alt="article image"
-      />
-    </picture>
-  </div>
-  <span class="blog__content__date">23rd August 2018</span>
-  <a class="blog__content__link" href="#">
-    <h2 class="blog__content__title">Company logo or brand identity: which one is more important? brand identity</h2>
-  </a>
-  <p class="blog__content__txt">
-    To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.
-  </p>
-</li>
-
-            <li class="blog__content__item">
-  <div class="blog__content__pic">
-    <picture>
-      <source
-        srcset="img/article-4_mobile.jpg, img/article-4_mobile_2x.jpg 2x"
-        media="(max-width: 600px)"
-      />
-      <source
-        srcset="img/article-4_tablet.jpg, img/article-4_tablet_2x.jpg 2x"
-        media="(max-width: 980px)"
-      />
-      <source srcset="img/article-4.jpg, img/article-4_2x.jpg 2x" />
-      <img
-        class="blog__content__img"
-        srcset="img/article-4.jpg, img/article-4_2x.jpg 2x"
-        alt="article image"
-      />
-    </picture>
-  </div>
-  <span class="blog__content__date">23rd August 2018</span>
-  <a class="blog__content__link" href="#">
-    <h2 class="blog__content__title">Best financial</h2>
-  </a>
-  <p class="blog__content__txt">
-    Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.
-  </p>
-</li>
-
-            <li class="blog__content__item">
-  <div class="blog__content__pic">
-    <picture>
-      <source
-        srcset="img/article-5_mobile.jpg, img/article-5_mobile_2x.jpg 2x"
-        media="(max-width: 600px)"
-      />
-      <source
-        srcset="img/article-5_tablet.jpg, img/article-5_tablet_2x.jpg 2x"
-        media="(max-width: 980px)"
-      />
-      <source srcset="img/article-5.jpg, img/article-5_2x.jpg 2x" />
-      <img
-        class="blog__content__img"
-        srcset="img/article-5.jpg, img/article-5_2x.jpg 2x"
-        alt="article image"
-      />
-    </picture>
-  </div>
-  <span class="blog__content__date">23rd August 2018</span>
-  <a class="blog__content__link" href="#">
-    <h2 class="blog__content__title">Company logo or brand identity: which one is more important? brand identity</h2>
-  </a>
-  <p class="blog__content__txt">
-    To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.
-  </p>
-</li>
-
-            <li class="blog__content__item">
-  <div class="blog__content__pic">
-    <picture>
-      <source
-        srcset="img/article-6_mobile.jpg, img/article-6_mobile_2x.jpg 2x"
-        media="(max-width: 600px)"
-      />
-      <source
-        srcset="img/article-6_tablet.jpg, img/article-6_tablet_2x.jpg 2x"
-        media="(max-width: 980px)"
-      />
-      <source srcset="img/article-6.jpg, img/article-6_2x.jpg 2x" />
-      <img
-        class="blog__content__img"
-        srcset="img/article-6.jpg, img/article-6_2x.jpg 2x"
-        alt="article image"
-      />
-    </picture>
-  </div>
-  <span class="blog__content__date">23rd August 2018</span>
-  <a class="blog__content__link" href="#">
-    <h2 class="blog__content__title">Top 5 fastest growing it service companies in philly</h2>
-  </a>
-  <p class="blog__content__txt">
-    Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.
-  </p>
-</li>
-
-          </ul>
-
-          <div class="pagination">
-  <a href="#" aria-label="prev articles">
-    <svg width="50" height="50">
-      <use xlink:href="img/sprite_multi.svg#arrow"></use>
-    </svg>
-  </a>
-  <ul>
-    <li>
-      <a class="pagination__btn active" href="#">
-        1
-      </a>
-    </li>
-    <li>
-      <a class="pagination__btn" href="#">
-        2
-      </a>
-    </li>
-    <li>
-      <a class="pagination__btn" href="#">
-        3
-      </a>
-    </li>
-    <li>
-      <a class="pagination__btn" href="#">
-        4
-      </a>
-    </li>
-  </ul>
-  <a href="#" aria-label="next articles">
-    <svg width="50" height="50">
-      <use xlink:href="img/sprite_multi.svg#arrow"></use>
-    </svg>
-  </a>
 </div>
-        </div>
-      </section>
-    </main>
 
-    <footer class="footer">
+    <main class="page">
+      <section class="blog">
+  <div class="blog__container container">
+    <h1 class="blog__title">My blog</h1>
+    <div class="blog__filter filter">
+      <form class="filter__form" name="filterForm">
+        <div class="filter__tags">
+          <span class="filter__name">Tags</span>
+          <label class="filter__label-tags filter__label-tags_blue">
+            <input class="filter__inp-tags" type="checkbox" name="blue">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_blue" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_cyan">
+            <input class="filter__inp-tags filter__inp-tags_cyan" type="checkbox" name="cyan">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_cyan" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_yellow">
+            <input class="filter__inp-tags filter__inp-tags_yellow" type="checkbox" name="yellow">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_yellow" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_turquoise">
+            <input class="filter__inp-tags filter__inp-tags_turquoise" type="checkbox" name="turquoise">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_turquoise" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_orange">
+            <input class="filter__inp-tags filter__inp-tags_orange" type="checkbox" name="orange">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_orange" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_red">
+            <input class="filter__inp-tags filter__inp-tags_red" type="checkbox" name="red">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_red" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_purple">
+            <input class="filter__inp-tags filter__inp-tags_purple" type="checkbox" name="purple">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_purple" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <label class="filter__label-tags filter__label-tags_green">
+            <input class="filter__inp-tags filter__inp-tags_green" type="checkbox" name="green">
+            <svg  class="filter__check-icon" width="12" height="12.5" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="filter__check-icon_green" d="M2 6.75L5.91301 12.77C6.20128 13.2135 6.85836 13.1893 7.11327 12.7259L13.425 1.25" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </label>
+        </div>
+        <div class="filter__views">
+          <span class="filter__name">Views</span>
+          <input class="filter__inp-views" type="radio" name="views" id="views-1" value="100-500" checked>
+          <label class="filter__label-views" for="views-1">100-500</label>
+          <input class="filter__inp-views" type="radio" name="views" id="views-2" value="500-1000">
+          <label class="filter__label-views" for="views-2">500-1000</label>
+          <input class="filter__inp-views" type="radio" name="views" id="views-3" value="1000-2000">
+          <label class="filter__label-views" for="views-3">1000-2000</label>
+        </div>
+        <div class="filter__comments">
+          <span class="filter__name">Comments</span>
+          <input class="filter__inp-comment" type="checkbox" id="comments-1" name="comments" value="0">
+          <label class="filter__label-comment" for="comments-1">0</label>
+          <input class="filter__inp-comment" type="checkbox" id="comments-2" name="comments" value="0-1">
+          <label class="filter__label-comment" for="comments-2">0-1</label>
+          <input class="filter__inp-comment" type="checkbox" id="comments-3" name="comments" value="1-50" checked>
+          <label class="filter__label-comment" for="comments-3">1-50</label>
+        </div>
+        <div class="filter__show">
+          <span class="filter__name">How show?</span>
+          <input class="filter__inp-show" type="radio" name="limit" id="show-1" value="5" checked>
+          <label class="filter__label-show" for="show-1">show 5</label>
+          <input class="filter__inp-show" type="radio" name="limit" id="show-2" value="10">
+          <label class="filter__label-show" for="show-2">show 10</label>
+        </div>
+        <div class="filter__sort">
+          <span class="filter__name">Sort by</span>
+          <input class="filter__inp-sort" type="radio" name="sort" id="sort-1" value="date" checked>
+          <label class="filter__label-sort" for="sort-1">date</label>
+          <input class="filter__inp-sort" type="radio" name="sort" id="sort-2" value="title">
+          <label class="filter__label-sort" for="sort-2">title</label>
+          <input class="filter__inp-sort" type="radio" name="sort" id="sort-3" value="views">
+          <label class="filter__label-sort" for="sort-3">views</label>
+        </div>
+        <button class="filter__btn btn">Apply</button>
+      </form>
+    </div>
+    <div class="blog__search search">
+      <form class="search__form">
+        <input class="search__inp" type="text">
+        <button class="search__btn btn">Search</button>
+      </form>
+    </div>
+    <div class="blog__posts post">
+      <div class="preloader active">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+        <div class="circle circle-5"></div>
+      </div>
+    </div>
+    <div class="blog__pagintaion pagination">
+      <button class="pagination__btn pagination__btn_prev" type="button">
+        <svg class="pagination__arrow-svg">
+         <use href="./img/svg/sprite.svg#arrow-slider"></use>
+        </svg>
+      </button>
+      <div class="pagination__pages">
+        <button class="pagination__page pagination__page_current" type="button">1</button>
+        <button class="pagination__page" type="button">2</button>
+        <button class="pagination__page" type="button">3</button>
+        <button class="pagination__page" type="button">4</button>
+        <button class="pagination__page" type="button">5</button>
+        <button class="pagination__page" type="button">6</button>
+        <button class="pagination__page" type="button">7</button>
+        <button class="pagination__page" type="button">8</button>
+      </div>
+      <button class="pagination__btn pagination__btn_next" type="button">
+        <svg class="pagination__arrow-svg">
+         <use href="./img/svg/sprite.svg#arrow-slider"></use>
+        </svg>
+      </button>
+    </div>  
+  </div>
+</section>
+    </main>
+    <footer class="footer footer-bg">
   <div class="footer__container container">
-    <div class="footer__up">
-      <div class="footer__nav">
-        <h3 class="footer__nav__title footer-title">Navigation</h3>
-        <ul class="footer__nav__list">
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">About Us</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Blog</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Design Services</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Featured On</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >2018 Holiday Catalog</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Shop By Designer</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="footer__nav">
-        <h3 class="footer__nav__title footer-title">Customer Information</h3>
-        <ul class="footer__nav__list">
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Contact Us</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Sale Exclusions</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Shipping & Returns</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Terms & Conditions</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Privacy Policy</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Search</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__nav">
-        <h3 class="footer__nav__title footer-title">Connect</h3>
-        <form class="footer__nav__form" action="#" method="POST">
-          <input type="email" placeholder="Email" />
-          <button class="btn btn-mail" type="submit">join</button>
-        </form>
-        <ul class="footer__nav__links">
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-fb"
-              href="#"
-              aria-label="link facebook"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-twitter"
-              href="#"
-              aria-label="link twitter"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-pinterest"
-              href="#"
-              aria-label="link pinterest"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#pinterest"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-inst"
-              href="#"
-              aria-label="link instagram"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__down">
-      <div class="raiting">
-        <span class="raiting__txt">Company Raiting</span>
-        <ul class="raiting__list" data-total-value="0">
-          <li class="raiting__item" tabindex="0" aria-label="star 5">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="5"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 4">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="4"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 3">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="3"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 2">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="2"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 1">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="1"></use>
-            </svg>
-          </li>
-        </ul>
-      </div>
-      <span class="footer__down__copyright">Copyright © 2018 Dlk • Design Life Kids</span>
-      <a href="https://directline.digital/" target="_blank">
-        Web Design — Direct Line Development
-      </a>
-    </div>
+    <h2 class="footer__title">Contacts</h2>
+    <p class="footer__txt-up">Want to know more or just chat?<br> You are welcome!</p>
+    <button class="footer__btn-sendmsg" type="button" data-sendMsg>Send message</button>
+    <ul class="footer__socials-list">
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Instagram</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Vk</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Telegram</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Mail</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> GitHub</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Phone</a>
+      </li>
+    </ul>
+    <p class="footer__txt-down">Design by <a href="/">DL Academy</a> <br> Program code from Maksim</p>
   </div>
 </footer>
 
+    
+    <div id="signin" aria-hidden="true" class="modal-signin">
+  <div class="modal-signin__wrapper modal-wrapper">
+    <form class="modal-signin__content modal-content js-signin" name="signin">
+      <label class="modal-signin__label modal-label" for="email">Email <span class="label-star">*</span></label>
+      <input class="modal-signin__input modal-input _req js-input js-input-email" id="email" type="text" name="email"/>
+      <span class="message-email"></span>
+      <label class="modal-signin__label modal-label" for="pass">Password <span class="label-star">*</span></label>
+      <input class="modal-signin__input modal-input _req js-input js-input-pass" type="password" id="pass" name="password"/>
+      <span class="message-password"></span>
+      <button type="submit" class="modal-signin__btn modal-btn">Login in</button>
+      <button data-close type="button" class="modal-signin__close modal-btn-close"><svg class="" data-close>
+       <use href="./img/svg/sprite.svg#close" data-close></use>
+      </svg></button>
+    </form>
+  </div>
+</div>
+    <div id="register" aria-hidden="true" class="modal-reg">
+  <div class="modal-reg__wrapper modal-wrapper">
+    <form class="modal-reg__content modal-content js-register" name="registration">
+      <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label">Email <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-email" type="text" name="email"/></label>
+        <div class="msgEmail"></div>
+      </div>
+      <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label" >Name <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-name" type="text" name="name"/><div class="msgName"></div></label>
+        
+        <label class="modal-reg__label modal-label">Surname <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-surname" type="text" name="surname"/><div class="msgSurname"></div></label>  
+      </div>
+      <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label">Password <span class="label-star">*</span> <input class="modal-reg__input modal-input js-input js-input-pass" type="password" name="password"/><div class="msgPass"></div></label>
+       
+        <label class="modal-reg__label modal-label">Repeat password <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-passRepeat" type="password" name="passwordRepeat"/><div class="msgRepPass"></div></label>
+      </div>
+       <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label">Location <span class="label-star">*</span> <input class="modal-reg__input modal-input js-input js-input-location" type="text" name="location"/><div class="msgLocation"></div></label>
+       
+        <label class="modal-reg__label modal-label">Age <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-age" name="age"/><div class="msgAge"></div></label>
+      </div>
+      
+      <input class="modal-reg__checkbox js-input-checkbox" type="checkbox" id="agree" name="agreement" />
+      <label class="modal-reg__label-agree modal-label" for="agree">Clicking on the button, you consent to the processing of your personal data.</label>
 
-    <script src="js/common.min.js"></script>
-  </body>
+
+      <button type="submit" class="modal-reg__btn modal-btn">Sign up</button>
+      <button data-close type="button" class="modal-reg__close modal-btn-close"><svg data-close class="">
+       <use data-close href="./img/svg/sprite.svg#close"></use>
+      </svg></button>
+    </form>
+  </div>
+</div>
+
+    <div id="sendmsg" aria-hidden="true" class="modal-sendmsg ">
+  <div class="modal-sendmsg__wrapper modal-wrapper">
+    <form class="modal-sendmsg__content modal-content js-message">
+      <div class="modal-sendmsg__inp-wrapper">
+        <label class="modal-sendmsg__label modal-label" >What is your name? <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-name js-input" type="text" name="name"/><span class="message-name"></span></label>
+        
+        <label class="modal-sendmsg__label modal-label">Message subject <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-subject js-input" type="text" name="messageSubject"/><span class="message-subject"></span></label>  
+      </div>
+      <div class="modal-sendmsg__inp-wrapper">
+        <label class="modal-sendmsg__label modal-label">Your Email <span class="label-star">*</span> <input class="modal-sendmsg__input modal-input js-input-email js-input"  name="email"/><span class="message-email"></span></label>
+       
+        <label class="modal-sendmsg__label modal-label">Your mobile phone <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-phone js-input" type="phone" name="phone"/><span class="message-phone"></span></label>
+      </div>
+      
+      <label class="modal-sendmsg__label modal-label" for="discuss">What do you want to discuss with me? </label>
+      <textarea class="modal-sendmsg__textarea js-input" name="" id="discuss" cols="30" rows="10" name="text"></textarea>
+      <span class="message-text"></span>
+      
+      <input class="modal-sendmsg__checkbox" type="checkbox" id="agree-sendmsg" name="agreement"/>
+      <label class="modal-sendmsg__label-agree modal-label" for="agree-sendmsg">Clicking on the button, you consent to the processing of your personal data.</label>
+
+
+      <button type="submit" class="modal-sendmsg__btn modal-btn">Send</button>
+      <button data-close type="button" class="modal-sendmsg__close modal-btn-close"><svg data-close class="">
+       <use data-close href="./img/svg/sprite.svg#close"></use>
+      </svg></button>
+    </form>
+  </div>
+</div>
+
+
+    <script src="js/blog.js"></script>
+	</body>
 </html>

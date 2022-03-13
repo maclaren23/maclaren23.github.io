@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/profile.css">
+    <title>My profile</title>
+  </head>
+	<body>
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a class="header__link current-page" href="/" aria-label="link to the main page">Home</a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="blog.html" class="nav__link">My blog</a></li>
+          <li class="nav__item js-btn-signin"><a href="#" class="nav__link" data-signin>Sign In</a></li>
+          <li class="nav__item js-btn-register"><a href="#" class="nav__link" data-register>Register</a></li>
+          <li class="nav__item js-btn-profile hidden"><a href="profile.html" class="nav__link">My profile</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <div class="burger">
+  
+    <input type="checkbox" id="checkbox" class="burger__checkbox visuallyHidden">
+    <label for="checkbox">
+      <svg class="ham hamRotate ham8 burger-location" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
+        <path
+              class="line top"
+              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+        <path
+              class="line middle"
+              d="m 30,50 h 40" />
+        <path
+              class="line bottom"
+              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+      </svg>
+    </label>
+    <div class="burger__menu">
+      <ul class="nav__list burger__list">
+        <li class="nav__item burger__item"><a href="index.html" class="nav__link burger__link">Home</a></li>
+        <li class="nav__item burger__item"><a href="blog.html" class="nav__link burger__link">My blog</a></li>
+        <li class="nav__item burger__item"><a href="#" class="nav__link burger__link" data-signin>Sign In</a></li>
+        <li class="nav__item burger__item"><a href="#" class="nav__link burger__link" data-register>Register</a></li>
+      </ul>
+    </div>
+
+</div>
+
+    <main class="page">
+      <section class="profile">
+  <div class="profile__container container">
+    <h1 class="profile__title">My profile</h1>
+    <div class="profile__content">
+      <div class="profile__img">
+        <img class="profile__photo" src="" alt="">
+      </div>
+      <div class="profile__nav">
+        <ul class="profile__user-desc">
+          <li class="profile__item">Name:<span class="profile__name">undefined</span></li>
+          <li class="profile__item">Surname:<span class="profile__surname">undefined</span></li>
+          <li class="profile__item">Email:<span class="profile__email">undefined</span></li>
+          <li class="profile__item">Password:<span class="profile__pass">********</span></li>
+          <li class="profile__item">Location:<span class="profile__location">undefined</span></li>
+          <li class="profile__item">Age:<span class="profile__age">undefined</span></li>
+        </ul>
+        <button class="profile__change-pass btn" type="button" data-changepass>Change password</button>
+        <button class="profile__change-data btn" type="button" data-changedata>Change other data</button>
+        <button class="profile__delete-acc btn" type="button">Delete account</button>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+    <div id="editpass" aria-hidden="true" class="modal-editpass">
+  <div class="modal-editpass__wrapper modal-wrapper">
+    <form class="modal-editpass__content modal-content">
+      <label class="modal-editpass__label modal-label" for="newpass">Old password <span class="label-star">*</span></label>
+      <input class="modal-editpass__input modal-input" type="mail" id="newpass" />
+      <label class="modal-editpass__label modal-label" for="newpass">New password <span class="label-star">*</span></label>
+      <input class="modal-editpass__input modal-input" type="mail" id="newpass" />
+      <label class="modal-editpass__label modal-label" for="repeatpass">Repeat new password <span class="label-star">*</span></label>
+      <input class="modal-editpass__input modal-input" type="mail" id="repeatpass" />
+      <button type="submit" class="modal-editpass__btn modal-btn">Change password</button>
+      <button data-close type="button" class="modal-editpass__close modal-btn-close"><svg class="" data-close>
+       <use href="./img/svg/sprite.svg#close" data-close></use>
+      </svg></button>
+    </form>
+  </div>
+</div>
+    <div id="editdata" aria-hidden="true" class="modal-editdata">
+  <div class="modal-editdata__wrapper modal-wrapper">
+    <form class="modal-editdata__content modal-content" name="editUserData">
+      <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label">Email<input class="modal-editdata__input modal-input" name="email"/></label>
+      </div>
+      <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label" >Name<input class="modal-editdata__input modal-input" name="name"/></label>
+        
+        <label class="modal-editdata__label modal-label">Surname<input class="modal-editdata__input modal-input" name="surname"/></label>  
+      </div>
+      <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label">Location <input class="modal-editdata__input modal-input" name="location"/></label>
+       
+        <label class="modal-editdata__label modal-label">Age<input class="modal-editdata__input modal-input" type="number"  name="age"/></label>
+      </div>
+       <div class="modal-editdata__inp-wrapper">
+        <label class="modal-editdata__label modal-label">Profile picture 
+          <input class="modal-editdata__input modal-input" type="file"/ name="avatar">
+          <input class="modal-editdata__input modal-input" type="text" placeholder="Select file"/>
+        </label>
+      </div>
+      
+    
+      <button type="submit" class="modal-editdata__btn modal-btn">Submit changes</button>
+      <button data-close type="button" class="modal-editdata__close modal-btn-close"><svg data-close class="">
+       <use data-close href="./img/svg/sprite.svg#close"></use>
+      </svg></button>
+    </form>
+  </div>
+</div>
+
+    
+    <script src="js/profile.js"></script>
+	</body>
+</html>

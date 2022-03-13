@@ -1,545 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Lato:wght@400;700&family=Montserrat:wght@300;600;700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/normalize.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/main.css">
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="css/common.min.css" />
-    <link rel="stylesheet" href="css/main.min.css" />
-    <title>DLK Main</title>
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>Main</title>
   </head>
-  <body>
+	<body>
     <header class="header">
-  <div class="header__container container">
-    <a href="/" class="header__logo" aria-label="link to the main page">
-      <svg class="dlk-logo">
-        <use href="img/sprite_multi.svg#dlk-logo"></use>
-      </svg>
-    </a>
-    <nav class="header__nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="catalog.html"> catalog</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#"> about us</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="blog.html"> blog</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="animation.html"> animation</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="svg.html"> svg</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="grid.html"> grid</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header__search">
-      <input
-        class="search__inp"
-        type="text"
-        placeholder="Search..."
-        aria-label="input search"
-      />
-      <button type="button" class="search__btn" aria-label="button search">
-        <svg class="search-icon">
-          <use href="img/sprite_multi.svg#search"></use>
-        </svg>
-      </button>
-    </div>
-    <a class="header__contact" href="contact.html">contact us</a>
-    <div class="burger-btns">
-      <button class="burger-btns__open">menu</button>
-      <button class="burger-btns__close">
-        <svg class="">
-          <use href="./img/sprite_multi.svg#close-burger"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div class="burger">
-    <div class="burger__menu">
-      <ul class="burger__list">
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="catalog.html"> catalog</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="#"> about us</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="blog.html"> blog</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="animation.html"> animation</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="svg.html"> svg</a>
-        </li>
-        <li class="nav__item burger__item">
-          <a class="nav__link" href="grid.html"> grid</a>
-        </li>
-      </ul>
-      <a class="header__contact burger__contact" href="contact.html"
-        >contact us</a
-      >
+  <div class="container">
+    <div class="header__container">
+      <a class="header__link current-page" href="/" aria-label="link to the main page">Home</a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="blog.html" class="nav__link">My blog</a></li>
+          <li class="nav__item js-btn-signin"><a href="#" class="nav__link" data-signin>Sign In</a></li>
+          <li class="nav__item js-btn-register"><a href="#" class="nav__link" data-register>Register</a></li>
+          <li class="nav__item js-btn-profile hidden"><a href="profile.html" class="nav__link">My profile</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
 
-    <main class="content">
-      <section class="banner container">
-        <div class="banner__container">
-          <div class="banner__desc">
-            <h2>the ooh noo collection</h2>
-            <p>Designed in Slovenia</p>
-            <button type="button" class="banner__btn btn">explore now</button>
-          </div>
-          <div class="banner__nav">
-            <span class="banner__page">01</span>
-            <ul class="banner__pagination">
-              <li class="banner__bullet active"></li>
-              <li class="banner__bullet"></li>
-              <li class="banner__bullet"></li>
-              <li class="banner__bullet"></li>
-            </ul>
-          </div>
-          <p class="banner__footer">
-            Free (continental) USA shipping on all orders of $100 USD or more!
-          </p>
-          <picture class="banner__pic">
-            <source srcset="img/monster_mobile.png, img/monster_mobile_2x.png 2x" media="(max-width: 650px)">
-            <source srcset="img/monster_tablet.png, img/monster_tablet_2x.png 2x" media="(max-width: 1023px)">
-            <source srcset="img/monster.png, img/monster_2x.png 2x">
-            <img class="banner__img" srcset="img/monster.png, img/monster_2x.png 2x" alt="pic monster">
-          </picture>
-          <button class="audio-btn">
-            <svg class="audio-btn__icon audio-btn__icon_on">
-              <use class="audio-btn__icon_on" href="./img/sprite_multi.svg#music-on"></use>
-            </svg>
-            <svg class="audio-btn__icon audio-btn__icon_off active">
-              <use class="audio-btn__icon_off" href="./img/sprite_multi.svg#music-off"></use>
-            </svg>
-          </button>
-        </div>
-      </section>
+    <div class="burger">
+  
+    <input type="checkbox" id="checkbox" class="burger__checkbox visuallyHidden">
+    <label for="checkbox">
+      <svg class="ham hamRotate ham8 @@location" viewBox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
+        <path
+              class="line top"
+              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+        <path
+              class="line middle"
+              d="m 30,50 h 40" />
+        <path
+              class="line bottom"
+              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+      </svg>
+    </label>
+    <div class="burger__menu">
+      <ul class="nav__list burger__list">
+        <li class="nav__item burger__item"><a href="index.html" class="nav__link burger__link">Home</a></li>
+        <li class="nav__item burger__item"><a href="blog.html" class="nav__link burger__link">My blog</a></li>
+        <li class="nav__item burger__item"><a href="#" class="nav__link burger__link" data-signin>Sign In</a></li>
+        <li class="nav__item burger__item"><a href="#" class="nav__link burger__link" data-register>Register</a></li>
+      </ul>
+    </div>
 
-      <section class="products-slider container">
-        <h1 class="products-slider__title title-two">category products</h1>
-        <div class="products-slider__content swiper mySwiper">
-          <div class="products-slider__list swiper-wrapper">
-            <div class="categories__item swiper-slide">
-  <img src="img/apparel.jpg" alt="@@alt">
-  <a class="categories__link" href="#">
-    apparel <br> kids
-  </a>
 </div>
-            <div class="categories__item swiper-slide">
-  <img src="img/holiday.jpg" alt="@@alt">
-  <a class="categories__link" href="#">
-    holiday <br> shop
-  </a>
-</div>
-            <div class="categories__item swiper-slide">
-  <img src="img/toys.jpg" alt="@@alt">
-  <a class="categories__link" href="toys.html">
-    toys
-  </a>
-</div>
-            <div class="categories__item swiper-slide">
-  <img src="img/accessories.jpg" alt="@@alt">
-  <a class="categories__link" href="#">
-    accessories
-  </a>
-</div>
-            <div class="categories__item swiper-slide">
-  <img src="img/sale.jpg" alt="@@alt">
-  <a class="categories__link" href="#">
-    sale
-  </a>
-</div>
-            <div class="categories__item swiper-slide">
-  <img src="img/adults.jpg" alt="@@alt">
-  <a class="categories__link" href="#">
-    apparel <br> adults
-  </a>
-</div>
-            <!-- <div class="products-slider__item swiper-slide">
-              <img src="img/apparel.jpg" alt="picture apparel">
-              <a class="products-slider__link swiper-slide" href="#">
-                apparel <br />
-                kids
-              </a>
-            </div>
-            <div class="products-slider__item swiper-slide">
-              <img src="img/holiday.jpg" alt="picture holiday">
-              <a class="products-slider__link swiper-slide" href="#">
-                holiday <br />
-                shop
-              </a>
-            </div>
-            <div class="products-slider__item swiper-slide">
-              <img src="img/toys.jpg" alt="picture toys">
-              <a class="products-slider__link swiper-slide" href="toys.html">
-                toys
-              </a>
-            </div>
-            <div class="products-slider__item swiper-slide">
-              <img src="img/accessories.jpg" alt="picture accessories">
-              <a class="products-slider__link swiper-slide" href="#">
-                accessories
-              </a>
-            </div>
-            <div class="products-slider__item swiper-slide">
-              <img src="img/sale.jpg" alt="picture sale">
-              <a class="products-slider__link swiper-slide" href="#"> sale </a>
-            </div>
-            <div class="products-slider__item swiper-slide">
-              <img src="img/adults.jpg" alt="picture adults">
-              <a class="products-slider__link swiper-slide" href="#">
-                apparel <br />
-                adults
-              </a>
-            </div> -->
+
+    <main class="page">
+      <section class="user">
+  <div class="user__container container">
+    <div class="user__top">
+      <h1 class="user__title">Maksim <br> Sudilovskiy</h1>
+      <p class="user__txt">
+        Future front-end developer 25 years old, Tolyatti
+      </p>
+    </div>
+    <div class="slider">
+      <div class="slider__wrapper">
+        <div class="slider__inner">
+          <div class="slider__item"><img class="slider__img" src="img/photo-1.jpg" alt="photo user"></div>
+          <div class="slider__item"><img class="slider__img" src="img/photo-2.jpg" alt="photo user"></div>
+          <div class="slider__item"><img class="slider__img" src="img/photo-2.jpg" alt="photo user"></div>
+          <div class="slider__item"><img class="slider__img" src="img/photo-2.jpg" alt="photo user"></div>
+        </div>
+      </div>
+      <div class="slider__nav">
+        <button class="slider__btn_prev slider__btn">
+          <svg class="slider__arrow-svg">
+            <use href="./img/svg/sprite.svg#arrow-slider"></use>
+          </svg>
+        </button>
+        <div class="slider__bullets"></div>
+        <button class="slider__btn_next slider__btn">
+          <svg class="slider__arrow-svg">
+            <use href="./img/svg/sprite.svg#arrow-slider"></use>
+          </svg>
+        </button>
+      </div> 
+    </div>
+  </div>
+</section>
+
+      <section class="about">
+  <div class="about__container container">
+    <h2 class="about_title">About me</h2>
+    <ul class="about__list">
+      <li class="about__item">
+        <p class="about__txt">
+          Aliquam tortor molestie turpis est tristique. Congue diam orci amet
+          quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod
+          nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel
+          sagittis.
+        </p>
+      </li>
+      <li class="about__item">
+        <p class="about__txt">
+          Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum
+          ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo.
+          Etiam platea consectetur.
+        </p>
+      </li>
+      <li class="about__item">
+        <p class="about__txt">
+          Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus
+          nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor
+          pellentesque tristique.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="skills">
+  <div class="skills__container container">
+    <h2 class="skills__title">Skills</h2>
+    <p class="skills_txt">I work in such programs as</p>
+    <ul class="skills__list">
+      <li class="skills__item">
+        <img src="../img/icon-html.svg" alt="icon html" />
+        <span>HTML 5</span>
+        <div class="skills__percent">
+          <span>85%</span> 
+          <svg width="142" height="9" viewBox="0 0 142 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="121" height="9" fill="#070707"/>
+          </svg>
+        </div>
+      </li>
+      <li class="skills__item">
+        <img src="../img/icon-css.svg" alt="icon css" />
+        <span>CSS/SCSS</span>
+        <div class="skills__percent">
+          <span>55%</span> 
+          <svg width="142" height="9" viewBox="0 0 142 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="71" height="9" fill="#070707"/>
+          </svg>
+        </div>
+      </li>
+      <li class="skills__item">
+        <img src="../img/icon-js.svg" alt="icon js" />
+        <span>JavaScript</span>
+        <div class="skills__percent">
+          <span>5%</span> 
+          <svg width="142" height="9" viewBox="0 0 142 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="31" height="9" fill="#070707"/>
+          </svg>
+        </div>
+      </li>
+      <li class="skills__item">
+        <img src="../img/icon-git.svg" alt="icon git" />
+        <span>Git/GitHub</span>
+        <div class="skills__percent">
+          <span>15%</span> 
+          <svg width="142" height="9" viewBox="0 0 142 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="18" height="9" fill="#070707"/>
+          </svg>
+        </div>
+      </li>
+      <li class="skills__item">
+        <img src="../img/icon-figma.svg" alt="icon figma" />
+        <span>Figma</span>
+        <div class="skills__percent">
+          <span>80%</span> 
+          <svg width="142" height="9" viewBox="0 0 142 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="113.6" height="9" fill="#070707"/>
+          </svg>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="portfolio">
+  <div class="portfolio__container container">
+    <h2 class="portfolio__title">Portfolio</h2>
+    <div class="portfolio__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="swiper-img" src="img/mysite.jpg" alt="picture my website">
+          <div class="swiper-desc">
+            <a class="swiper-link" href="#">Learning site for DL Academy courses</a>
+            <p class="swiper-txt">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
           </div>
         </div>
-        <div class="products-slider__footer">
-          <button
-            class="products-slider__btn btn-prev"
-            type="button"
-            aria-label="prev slide"
-          ></button>
-          <button
-            class="products-slider__btn btn-next"
-            type="button"
-            aria-label="next slide"
-          ></button>
-          <p>
-            Modern finds for the modern home. Curated goods by unique designers
-            around the world from fashion to furniture for kids and adults.
-          </p>
-        </div>
-      </section>
-
-      <section class="delivery container">
-        <div class="delivery__img">
-          <picture>
-            <source srcset="img/woman-mobile.jpg, img/woman-mobile-2x.jpg 2x" media="(max-width: 650px)">
-            <source srcset="img/woman-tablet.jpg, img/woman-tablet-2x.jpg 2x" media="(max-width: 820px)">
-            <source srcset="img/woman.jpg, img/woman-2x.jpg 2x">
-            <img srcset="img/woman.jpg, img/woman-2x.jpg 2x" alt="pic woman">
-          </picture>
-        </div>
-        <div class="delivery__content">
-          <h2 class="delivery__title title-two">delivery</h2>
-          <ul class="delivery__list">
-            <li class="delivery__item">
-              <button class="delivery__btn active" type="button">
-                Delivery
-              </button>
-            </li>
-            <li class="delivery__item">
-              <button class="delivery__btn" type="button">Guarantee</button>
-            </li>
-            <li class="delivery__item">
-              <button class="delivery__btn" type="button">Credit</button>
-            </li>
-          </ul>
-          <div class="delivery__desc">
-            <p class="delivery__desc__txt1">
-              Some days i feel like i've been working on dlk my entire life and
-              there are other days that i am completely shocked that four years
-              have flown by. It's simply magical.
-            </p>
-            <p class="delivery__desc__txt2">
-              What started as an outlet to deal with the traumatic loss of my
-              husband, dlk has now become a truly happy place for me and i have
-              you and all of the beautiful designers that we work with to thank!
-            </p>
+        <div class="swiper-slide">
+          <img class="swiper-img" src="img/mysite.jpg" alt="picture my website">
+          <div class="swiper-desc">
+            <a class="swiper-link" href="#">Learning site for DL Academy courses</a>
+            <p class="swiper-txt">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
           </div>
-          <a class="delivery__btn__more btn" href="#">learn more</a>
         </div>
-      </section>
+        <div class="swiper-slide">
+          <img class="swiper-img" src="img/mysite.jpg" alt="picture my website">
+          <div class="swiper-desc">
+            <a class="swiper-link" href="#">Learning site for DL Academy courses</a>
+            <p class="swiper-txt">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev swiper-button"></div>
+      <div class="swiper-button-next swiper-button"></div>
+    </div>
+  </div>
+</section>
 
-      <section class="partners container">
-        <h3 class="partners__title hidden">partners</h3>
-        <ul class="partners__list">
-          <li class="partners__item">
-            <picture>
-              <source srcset="img/logo-mail-mobile.png, img/logo-mail-mobile-2x.png 2x" media="(max-width: 600px)">
-              <source srcset="img/logo-mail-tablet.png, img/logo-mail-tablet-2x.png 2x" media="(max-width: 980px)">
-              <source srcset="img/logo-mail.png, img/womlogo-mail-2x.png 2x">
-              <img srcset="img/logo-mail.png, img/logo-mail-2x.png 2x" alt="logo mailru">
-            </picture>
-          </li>
-          <li class="partners__item">
-            <picture>
-              <source srcset="img/logo-apple-mobile.png, img/logo-apple-mobile-2x.png 2x" media="(max-width: 600px)">
-              <source srcset="img/logo-apple-tablet.png, img/logo-apple-tablet-2x.png 2x" media="(max-width: 980px)">
-              <source srcset="img/logo-apple.png, img/womlogo-apple-2x.png 2x">
-              <img srcset="img/logo-apple.png, img/logo-apple-2x.png 2x" alt="logo apple">
-            </picture>
-          </li>
-          <li class="partners__item">
-            <picture>
-              <source srcset="img/logo-eltex-mobile.png, img/logo-eltex-mobile-2x.png 2x" media="(max-width: 600px)">
-              <source srcset="img/logo-eltex-tablet.png, img/logo-eltex-tablet-2x.png 2x" media="(max-width: 980px)">
-              <source srcset="img/logo-eltex.png, img/womlogo-eltex-2x.png 2x">
-              <img srcset="img/logo-eltex.png, img/logo-eltex-2x.png 2x" alt="logo eltex">
-            </picture>
-          </li>
-          <li class="partners__item">
-            <picture>
-              <source srcset="img/logo-owox-mobile.png, img/logo-owox-mobile-2x.png 2x" media="(max-width: 600px)">
-              <source srcset="img/logo-owox-tablet.png, img/logo-owox-tablet-2x.png 2x" media="(max-width: 980px)">
-              <source srcset="img/logo-owox.png, img/womlogo-owox-2x.png 2x">
-              <img srcset="img/logo-owox.png, img/logo-owox-2x.png 2x" alt="logo owox">
-            </picture>
-          </li>
-        </ul>
-      </section>
-
-      <section class="about container">
-        <div class="about__left">
-          <h2 class="about__left__title title-two">design life kids</h2>
-          <span>About Us</span>
-          <p>
-            Some days i feel like i've been working on dlk my entire life and
-            there are other days that i am completely shocked that four years
-            have flown by. It's simply magical.
-          </p>
-          <a class="about__left__btn btn" href="#">buy now</a>
-        </div>
-        <div class="about__right">
-          <h2 class="about__right__title title-two">contacts</h2>
-          <p>
-            Some days i feel like i've been working on dlk my entire life and
-            there are other days that i am completely shocked that four years
-            have flown by. It's simply magical.
-          </p>
-          <iframe class="about__right__map" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2372.54699755648!2d49.28953688000777!3d53.51228719764235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x416879ed1ada6fbd%3A0x751234490b1ca980!2zRGlyZWN0IExpbmUgRGlnaXRhbCwg0L_RgC4g0KHRgtC10L_QsNC90LAg0KDQsNC30LjQvdCwLCA0NCwg0KLQvtC70YzRj9GC0YLQuCwg0KHQsNC80LDRgNGB0LrQsNGPINC-0LHQuy4sIDQ0NTAyNw!3m2!1d53.512214699999994!2d49.2902323!5e0!3m2!1sru!2sru!4v1640935072753!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-      </section>
     </main>
-    <footer class="footer">
+    <footer class="footer @@class-bg">
   <div class="footer__container container">
-    <div class="footer__up">
-      <div class="footer__nav">
-        <h3 class="footer__nav__title footer-title">Navigation</h3>
-        <ul class="footer__nav__list">
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">About Us</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Blog</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Design Services</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Featured On</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >2018 Holiday Catalog</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Shop By Designer</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="footer__nav">
-        <h3 class="footer__nav__title footer-title">Customer Information</h3>
-        <ul class="footer__nav__list">
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Contact Us</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Sale Exclusions</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Shipping & Returns</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#"
-              >Terms & Conditions</a
-            >
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Privacy Policy</a>
-          </li>
-          <li class="footer__nav__item footer-item">
-            <a class="footer__nav__link footer-link" href="#">Search</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__nav">
-        <h3 class="footer__nav__title footer-title">Connect</h3>
-        <form class="footer__nav__form" action="#" method="POST">
-          <input type="email" placeholder="Email" />
-          <button class="btn btn-mail" type="submit">join</button>
-        </form>
-        <ul class="footer__nav__links">
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-fb"
-              href="#"
-              aria-label="link facebook"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-twitter"
-              href="#"
-              aria-label="link twitter"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-pinterest"
-              href="#"
-              aria-label="link pinterest"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#pinterest"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__nav__social">
-            <a
-              class="footer__nav__link link-inst"
-              href="#"
-              aria-label="link instagram"
-            >
-              <svg>
-                <use href="img/sprite_mono.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__down">
-      <div class="raiting">
-        <span class="raiting__txt">Company Raiting</span>
-        <ul class="raiting__list" data-total-value="0">
-          <li class="raiting__item" tabindex="0" aria-label="star 5">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="5"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 4">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="4"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 3">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="3"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 2">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="2"></use>
-            </svg>
-          </li>
-          <li class="raiting__item" tabindex="0" aria-label="star 1">
-            <svg class="star-icon">
-              <use href="img/sprite_multi.svg#star" data-item-value="1"></use>
-            </svg>
-          </li>
-        </ul>
-      </div>
-      <span class="footer__down__copyright">Copyright © 2018 Dlk • Design Life Kids</span>
-      <a href="https://directline.digital/" target="_blank">
-        Web Design — Direct Line Development
-      </a>
-    </div>
+    <h2 class="footer__title">Contacts</h2>
+    <p class="footer__txt-up">Want to know more or just chat?<br> You are welcome!</p>
+    <button class="footer__btn-sendmsg" type="button" data-sendMsg>Send message</button>
+    <ul class="footer__socials-list">
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Instagram</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Vk</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Telegram</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Mail</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> GitHub</a>
+      </li>
+      <li class="footer__socials-item">
+        <a class="footer__socials-link btn" href="#"> Phone</a>
+      </li>
+    </ul>
+    <p class="footer__txt-down">Design by <a href="/">DL Academy</a> <br> Program code from Maksim</p>
   </div>
 </footer>
- 
-    <div class="popup-contacts">
-  <div class="popup-contacts__body">
-    <div class="contact-form">
-      <form action="#" method="POST">
-        <div class="contact-form__wrapper">
-          <label for="contact-name">Name</label>
-          <input type="text" id="contact-name" />
-        </div>
-        <div class="contact-form__wrapper">
-          <div class="contact-form__wrapper__inner">
-            <label for="contact-phone">Phone</label>
-            <input type="number" id="contact-phone" />
-          </div>
-          <div class="contact-form__wrapper__inner">
-            <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" />
-          </div>
-        </div>
-        <div class="contact-form__wrapper">
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message"></textarea>
-        </div>
-        <div class="contact-form__consent">
-          <input
-            class="contact-form__consent__inp"
-            type="checkbox"
-            id="contact-check"
-            checked
-          />
-          <label class="contact-form__consent__label" for="contact-check"
-            >By clicking on the button, you consent to the processing of your
-            personal data
-          </label>
-        </div>
-        <button class="contact-form__btn btn" type="submit">submit</button>
-      </form>
-      <button class="popup-btn-close" type="button" aria-label="Close">
-        <svg class="popup-btn-close">
-          <use class="popup-btn-close" href="img/sprite_multi.svg#btn-close"></use>
-        </svg>
-      </button>
-    </div>
+
+
+    <div id="signin" aria-hidden="true" class="modal-signin">
+  <div class="modal-signin__wrapper modal-wrapper">
+    <form class="modal-signin__content modal-content js-signin" name="signin">
+      <label class="modal-signin__label modal-label" for="email">Email <span class="label-star">*</span></label>
+      <input class="modal-signin__input modal-input _req js-input js-input-email" id="email" type="text" name="email"/>
+      <span class="message-email"></span>
+      <label class="modal-signin__label modal-label" for="pass">Password <span class="label-star">*</span></label>
+      <input class="modal-signin__input modal-input _req js-input js-input-pass" type="password" id="pass" name="password"/>
+      <span class="message-password"></span>
+      <button type="submit" class="modal-signin__btn modal-btn">Login in</button>
+      <button data-close type="button" class="modal-signin__close modal-btn-close"><svg class="" data-close>
+       <use href="./img/svg/sprite.svg#close" data-close></use>
+      </svg></button>
+    </form>
+  </div>
+</div>
+    <div id="register" aria-hidden="true" class="modal-reg">
+  <div class="modal-reg__wrapper modal-wrapper">
+    <form class="modal-reg__content modal-content js-register" name="registration">
+      <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label">Email <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-email" type="text" name="email"/></label>
+        <div class="msgEmail"></div>
+      </div>
+      <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label" >Name <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-name" type="text" name="name"/><div class="msgName"></div></label>
+        
+        <label class="modal-reg__label modal-label">Surname <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-surname" type="text" name="surname"/><div class="msgSurname"></div></label>  
+      </div>
+      <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label">Password <span class="label-star">*</span> <input class="modal-reg__input modal-input js-input js-input-pass" type="password" name="password"/><div class="msgPass"></div></label>
+       
+        <label class="modal-reg__label modal-label">Repeat password <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-passRepeat" type="password" name="passwordRepeat"/><div class="msgRepPass"></div></label>
+      </div>
+       <div class="modal-reg__inp-wrapper">
+        <label class="modal-reg__label modal-label">Location <span class="label-star">*</span> <input class="modal-reg__input modal-input js-input js-input-location" type="text" name="location"/><div class="msgLocation"></div></label>
+       
+        <label class="modal-reg__label modal-label">Age <span class="label-star">*</span><input class="modal-reg__input modal-input js-input js-input-age" name="age"/><div class="msgAge"></div></label>
+      </div>
+      
+      <input class="modal-reg__checkbox js-input-checkbox" type="checkbox" id="agree" name="agreement" />
+      <label class="modal-reg__label-agree modal-label" for="agree">Clicking on the button, you consent to the processing of your personal data.</label>
+
+
+      <button type="submit" class="modal-reg__btn modal-btn">Sign up</button>
+      <button data-close type="button" class="modal-reg__close modal-btn-close"><svg data-close class="">
+       <use data-close href="./img/svg/sprite.svg#close"></use>
+      </svg></button>
+    </form>
   </div>
 </div>
 
-    <audio class="audio" controls loop hidden
-      src="/media/rain.mp3" type="audio/mpeg">
-    </audio>
+    <div id="sendmsg" aria-hidden="true" class="modal-sendmsg ">
+  <div class="modal-sendmsg__wrapper modal-wrapper">
+    <form class="modal-sendmsg__content modal-content js-message">
+      <div class="modal-sendmsg__inp-wrapper">
+        <label class="modal-sendmsg__label modal-label" >What is your name? <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-name js-input" type="text" name="name"/><span class="message-name"></span></label>
+        
+        <label class="modal-sendmsg__label modal-label">Message subject <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-subject js-input" type="text" name="messageSubject"/><span class="message-subject"></span></label>  
+      </div>
+      <div class="modal-sendmsg__inp-wrapper">
+        <label class="modal-sendmsg__label modal-label">Your Email <span class="label-star">*</span> <input class="modal-sendmsg__input modal-input js-input-email js-input"  name="email"/><span class="message-email"></span></label>
+       
+        <label class="modal-sendmsg__label modal-label">Your mobile phone <span class="label-star">*</span><input class="modal-sendmsg__input modal-input js-input-phone js-input" type="phone" name="phone"/><span class="message-phone"></span></label>
+      </div>
+      
+      <label class="modal-sendmsg__label modal-label" for="discuss">What do you want to discuss with me? </label>
+      <textarea class="modal-sendmsg__textarea js-input" name="" id="discuss" cols="30" rows="10" name="text"></textarea>
+      <span class="message-text"></span>
+      
+      <input class="modal-sendmsg__checkbox" type="checkbox" id="agree-sendmsg" name="agreement"/>
+      <label class="modal-sendmsg__label-agree modal-label" for="agree-sendmsg">Clicking on the button, you consent to the processing of your personal data.</label>
+
+
+      <button type="submit" class="modal-sendmsg__btn modal-btn">Send</button>
+      <button data-close type="button" class="modal-sendmsg__close modal-btn-close"><svg data-close class="">
+       <use data-close href="./img/svg/sprite.svg#close"></use>
+      </svg></button>
+    </form>
+  </div>
+</div>
+
+   
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
     
-    <script src="js/common.min.js"></script>
-    <script src='https://unpkg.com/swiper@7/swiper-bundle.min.js'></script>
-    <script src="js/main.min.js"></script>
-  </body>
+
+	</body>
 </html>
